@@ -9,10 +9,16 @@
     <script>
     var computerScore=0;
 function rps() {
- computerScore = document.getElementById('computerScore');
-    var number = computerScore.innerHTML;
-    number++;
-    computerScore.innerHTML = number;
+var element = document.getElementById('computerScore'); 
+
+   // get the attribute, parse it and increment it :
+   value = parseInt(element.getAttribute('value'), 10)+1; 
+
+   // stores the incremented value :
+   element.setAttribute('value', value);
+
+   // and change the innerHTML (conversion to string is implicit)
+   element.innerHTML = value;
 }
  </script>   
 <b>computer score:</b><p id="computerScore" value="0">-</p>
