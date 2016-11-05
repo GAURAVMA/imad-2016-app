@@ -28,17 +28,36 @@
 
 <hr style="background-color:red;height:20">
 <div style="height:360px;width:100%">
-<IMG SRC="http://media02.hongkiat.com/ww-flower-wallpapers/roundflower.jpg" height=360px width=100%>
+
+<script type="text/javascript">
+    window.onload = function(){
+        window.displayImgCount = 0;
+        function cycleImage(){
+            if (displayImgCount !== 0) {
+                document.getElementById("img" + displayImgCount).style.display = "none";
+            }
+            displayImgCount = displayImgCount === 3 ? 1 : displayImgCount + 1;
+            document.getElementById("img" + displayImgCount).style.display = "block";
+            setTimeout(cycleImage, 1000);
+        }
+        cycleImage();
+    }
+</script>
+
+
+
+
+<img id="img1" src="http://media02.hongkiat.com/ww-flower-wallpapers/roundflower.jpg" style="display: none">
+    <img id="img2" src="https://pixabay.com/static/uploads/photo/2014/12/10/21/40/lotus-563456_960_720.jpg" style="display: none">
+    <img id="img3" src="http://webneel.com/wallpaper/sites/default/files/images/01-2014/15-flower-wallpaper.preview.jpg" style="display: none">
+
+
+
+
+
 <DIV STYLE="position:absolute; top:0px; margin:20%">
 <CENTER><p style="font-family:Tahoma;font-weight:bold;text-align:left;font-size:25px">Hi, I'm Gaurav, a B.Tech student at COEP. Welcome to my site. Enjoy.</p></center>
 </DIV></div>
-    
-    
-    
-    
-    
-    
-    
     
     
 </body></html>
