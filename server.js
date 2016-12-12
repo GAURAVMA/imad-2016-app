@@ -10,6 +10,10 @@ var count=0;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'homepage.html'));
 });
+app.get('/ab', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+});
+
 
 app.get('/t', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Sorry.html'));
