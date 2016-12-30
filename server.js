@@ -18,6 +18,22 @@ app.get('/myblogmain.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'myblogmain.html'));
 });
 
+app.get('/blog1.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog1.html'));
+});
+
+app.get('/blog2.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog2.html'));
+});
+
+app.get('/blog3.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog3.html'));
+});
+
+app.get('/blog4.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blog4.html'));
+});
+
 app.get('/t', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Sorry.html'));
 });
