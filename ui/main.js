@@ -1,7 +1,7 @@
 //console.log('Loaded!');
 var button=document.getElementById("counter");
 
-button.onCLick=function(){
+button.oncLick=function(){
     
     
     var request=new XMLHttpRequest();
