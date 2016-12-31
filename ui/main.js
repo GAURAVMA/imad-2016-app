@@ -1,7 +1,7 @@
 //console.log('Loaded!');
-var button=document.getElementById('a');
+var a=document.getElementById('a');
 
-button.onclick=function(){
+a.onclick=function(){
     
     
     var request=new XMLHttpRequest();
