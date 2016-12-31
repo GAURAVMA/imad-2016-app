@@ -10,7 +10,7 @@ request.onreadystatechange = function() {
         }
     }
 };
- request.open('GET', '/counter', true);
+ request.open('GET', '/ui/counter', true);
     request.send(null);
 }
 
