@@ -22,7 +22,7 @@ button.onCLick=function(){
         
     };
     
-    request.open('GET','/ui/counter',true);
+    request.open('GET','http://gauravma.imad.hasura-app.io/counter',true);
    request.send(null); 
     
 };
