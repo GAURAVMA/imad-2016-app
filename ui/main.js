@@ -1,5 +1,5 @@
 //console.log('Loaded!');
-var button=document.getElementbyId("counter");
+var button=document.getElementById("counter");
 
 button.onCLick=function(){
     
