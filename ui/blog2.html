@@ -8,13 +8,33 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
+.padder{
+    padding-left:1%;
+    padding-right:1%;
+}
+.padder1{
+    padding-left:50px;
+    padding-right:50px;
+}
+@media screen and (min-width: 1250px) {
+   .padder{
+    padding-left:23%;
+    padding-right:23%;
+}
+.padder1{
+    padding-left:10%;
+    padding-right:5%;
+}
+}
+</style>
+<style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
 <body class="w3-light-grey">
 
 <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1400px">
+<div class="w3-content" style="max-width:1400px;padding-left:3%;padding-right:3%">
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32"> 
@@ -32,11 +52,11 @@ and is wrapped around the whole page content, except for the footer in this exam
     <img src="https://www.treecareauckland.co.nz/wp-content/uploads/2016/02/banner-tree-planting.jpg" alt="MAIN BUILD." style="width:100%">
     <div class="w3-container w3-padding-8">
       <h3><b>The Tree That I Planted</b></h3>
-      <h5>Title description-None Type-<span class="w3-opacity">POEM</span></h5>
+      <h5>Title description-MY Type-<span class="w3-opacity">POEM</span></h5>
     </div>
 
-    <div class="w3-container" style="padding-bottom:25px">
-      <div style="background-color:#ffeb3b;color:red;align:center;width:100%;padding-left: 50px;padding-right: 50px;padding-bottom: 50px;padding-top: 25px;">
+    <div class="w3-container padder" style="padding-bottom:25px">
+      <div class="padder1" style="background-color:#ffeb3b;color:red;align:center;width:100%;padding-left: 50px;padding-right: 50px;padding-bottom: 50px;padding-top: 25px;">
       <p>When I was upset,<br>or in pain,<br>Or everything I did went in wain,<br>You were always there for me.</p>
       <p>When dad beat me,<br>Mom didn't talk,<br>Without even a 'Hello', everyone away walked,<br>You were present to talk.</p>
       <p>I could share with you,<br>My sorrows, My dreams,<br>The secretly eaten Ice-Creams,<br>You didn't shout or get bored.</p>
