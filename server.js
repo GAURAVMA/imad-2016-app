@@ -27,14 +27,16 @@ app.get('/counter', function (req, res) {
 var pool=new Pool(config);
 var artcount;
 app.get('/db', function (req, res) {
-    pool.query('Select Count(*) from artlist',function(err,result){
+    pool.query('Select Count(artname) from artlist',function(err,result){
         if(err){}
         else{
             
-            artcount=JSON.stringify(result.rows.count(*));
+            artcount=JSON.stringify(result.rows.count(artname));
             res.send(artcount);
         }
     });
+
+
 
 });
 
