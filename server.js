@@ -59,7 +59,7 @@ app.get('/db', function (req, res) {
 });
 
 
- sendata="<div>";
+sendata="<div>";
 app.get('/cb', function (req, res) {
     
         pool.query('SELECT * from artlist', function(err,result)      {
@@ -77,9 +77,13 @@ app.get('/cb', function (req, res) {
         //res.send(JSON.stringify(result.rows[0].artname)+JSON.stringify(result.rows[1].artname)+JSON.stringify(result.rows[2].artname)+JSON.stringify(result.rows[3].artname));
         
     }
-});
     });
+
+
+
 });
+
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'homepage.html'));
