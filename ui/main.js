@@ -15,6 +15,20 @@ request.onreadystatechange = function() {
     request.send(null);
 }
 
+function getCOMM(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('combox');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+ request.open('GET', 'http://gauravma.imad.hasura-app.io/cb', true);
+    request.send(null);
+}
 
 
 function getCounter(){
@@ -33,7 +47,7 @@ request.onreadystatechange = function() {
 }
 
 
-
+getCOMM();
 getGM();
 
 getCounter();
