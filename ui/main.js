@@ -59,7 +59,7 @@ a.onclick=function(){
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.status === 200){
                 var counter=request.responseText;
-                var span=document.getElementById('b');
+                var span=document.getElementById('combox');
                 span.innerHTML=counter.toString();
             }
         }
