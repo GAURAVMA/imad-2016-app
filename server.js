@@ -31,7 +31,7 @@ app.get('/db', function (req, res) {
         if(err){}
         else{
             
-            artcount=result;
+            artcount=result.row;
             res.send(artcount);
         }
     });
