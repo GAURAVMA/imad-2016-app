@@ -57,7 +57,21 @@ var comment=document.getElementById('comment').value;
 var username=document.getElementById('username').value;
 var anda=document.getElementById('butt');
 anda.onclick = function(){
-   getCOM(); 
+    var request=new XMLHttpRequest();
+        request.onreadystatechange=function(){
+            if(request.readyState === XMLHttpRequest.DONE){
+                if(request.status === 200){
+                  getCOM();
+            }
+            
+            
+        }
+        
+    };
+    
+    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+comment+'/'+username,true);
+   request.send(null); 
+    
 };
 
 var a=document.getElementById('a');
