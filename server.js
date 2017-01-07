@@ -89,9 +89,8 @@ app.get('/cb', function (req, res) {
     });
     });
 
-var comment=document.getElementById('comment').value;
-var username=document.getElementById('username').value;
-app.get('/cb1', function (req, res) {
+
+app.get('/cb1/:comment/:username', function (req, res) {
   pool.query('Insert into comlist (comment,username) values('+comment+','+username+')',function(err,result){
       if(err){}
       else{
