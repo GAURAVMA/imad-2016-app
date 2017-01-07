@@ -28,7 +28,7 @@ var pool=new Pool(config);
 app.get('/db', function (req, res) {
 pool.query('SELECT * from artlist', function(err,result)      {
     if(err){}
-    else{res.send(JSON);}
+    else{res.send(JSON.stringify(result.rows[0].artname)+JSON.stringify(result.rows[1].artname)+JSON.stringify(result.rows[2].artname)+JSON.stringify(result.rows[3].artname));}
 });
 });
 
