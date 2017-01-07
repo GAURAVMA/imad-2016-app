@@ -84,13 +84,24 @@ app.get('/cb', function (req, res) {
        res.send(sendata);
         sendata="";
         //res.send(JSON.stringify(result.rows[0].artname)+JSON.stringify(result.rows[1].artname)+JSON.stringify(result.rows[2].artname)+JSON.stringify(result.rows[3].artname));
-        
     }
-});
+    });
+    });
     });
 
-
-
+var comm=document.getElementById('comment');
+var user=document.getElementById('username');
+comment=comm.value;
+username=user.value;
+app.get('/cb1', function (req, res) {
+  pool.query('Insert into comlist (comment,username) values('+comment+','+username+')',function(err,result){
+      if(err){}
+      else{
+          
+          
+          
+      }
+  });
 });
 
 
