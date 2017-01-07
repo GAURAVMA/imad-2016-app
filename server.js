@@ -61,7 +61,7 @@ app.get('/db', function (req, res) {
 
 var comcount;
 var sendata="<div>";
-app.get('/db', function (req, res) {
+app.get('/cb', function (req, res) {
     pool.query('Select Count(comcount) from comlist',function(err,result){
         if(err){}
         else{
