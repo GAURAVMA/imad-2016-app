@@ -53,6 +53,8 @@ getGM();
 
 getCounter();
 
+var comment=document.getElementById('comment').value;
+var username=document.getElementById('username').value;
 var a=document.getElementById('combut');
 a.onclick=function(){
     var request=new XMLHttpRequest();
@@ -65,7 +67,7 @@ a.onclick=function(){
         
     };
     
-    request.open('GET','http://gauravma.imad.hasura-app.io/cb1',true);
+    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+comment+'/'+username,true);
    request.send(null); 
     
 };
