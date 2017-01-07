@@ -33,7 +33,7 @@ app.get('/db', function (req, res) {
         else{
             
             artcount=number(JSON.stringify(result.rows[0].count));
-         res.send(artcount);
+         res.send(artcount.toString());
         }
         pool.query('SELECT * from artlist', function(err,result)      {
     if(err){}
