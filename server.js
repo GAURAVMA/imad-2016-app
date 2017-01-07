@@ -46,7 +46,7 @@ app.get('/db', function (req, res) {
         
         sendata=sendata+"</div>";
         res.send(sendata);
-        
+        sendata="";
         //res.send(JSON.stringify(result.rows[0].artname)+JSON.stringify(result.rows[1].artname)+JSON.stringify(result.rows[2].artname)+JSON.stringify(result.rows[3].artname));
         
     }
