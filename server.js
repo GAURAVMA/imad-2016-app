@@ -38,7 +38,7 @@ app.get('/db', function (req, res) {
         pool.query('SELECT * from artlist', function(err,result)      {
     if(err){}
     else{
-        for(var i=1;i<4;i++){
+        for(var i=0;i<4;i++){
             sendata=sendata+"<p>";
             sendata=sendata+JSON.stringify(result.rows[i].artname);
             sendata=sendata+"</p>";
