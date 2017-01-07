@@ -61,14 +61,7 @@ app.get('/db', function (req, res) {
 
  sendata="<div>";
 app.get('/cb', function (req, res) {
-    pool.query('Select Count(artname) from artlist',function(err,result){
-        if(err){}
-        else{
-            
-            artcount=(JSON.stringify(result.rows[0].count));
-            artcount=Number(artcount.replace(/"/g,""));
-         
-        }
+    
         pool.query('SELECT * from artlist', function(err,result)      {
     if(err){}
     else{
