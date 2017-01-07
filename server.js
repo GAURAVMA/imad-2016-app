@@ -58,8 +58,8 @@ app.get('/db', function (req, res) {
 
 });
 
-var artcount;
-var sendata="<div>";
+
+ sendata="<div>";
 app.get('/cb', function (req, res) {
     pool.query('Select Count(artname) from artlist',function(err,result){
         if(err){}
