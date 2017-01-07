@@ -15,7 +15,7 @@ request.onreadystatechange = function() {
     request.send(null);
 }
 
-function getCOMM(){
+function getCOM(){
 var request = new XMLHttpRequest();
 request.onreadystatechange = function() {
     if(request.readyState === XMLHttpRequest.DONE) {
