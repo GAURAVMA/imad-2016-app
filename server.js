@@ -58,6 +58,36 @@ app.get('/db', function (req, res) {
 
 });
 
+var artcount;
+var sendata="<div>";
+app.get('/cb', function (req, res) {
+    pool.query('Select Count(artname) from artlist',function(err,result){
+        if(err){}
+        else{
+            
+            artcount=(JSON.stringify(result.rows[0].count));
+            artcount=Number(artcount.replace(/"/g,""));
+         
+        }
+        pool.query('SELECT * from artlist', function(err,result)      {
+    if(err){}
+    else{
+        for(var i=0;i<artcount;i++){
+            sendata=sendata+"<p>";
+            sendata=sendata+JSON.stringify(result.rows[i].artname);
+            sendata=sendata+"</p>";
+        }
+        
+        sendata=sendata+"</div>";
+       res.send(sendata);
+        sendata="";
+        //res.send(JSON.stringify(result.rows[0].artname)+JSON.stringify(result.rows[1].artname)+JSON.stringify(result.rows[2].artname)+JSON.stringify(result.rows[3].artname));
+        
+    }
+});
+    });
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'homepage.html'));
 });
