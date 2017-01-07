@@ -91,13 +91,13 @@ app.get('/cb', function (req, res) {
 
 
 
-app.get('/cb1/:comment/:username', function (req, res) {
+app.get('/cb1/:comment', function (req, res) {
    var comment=req.params.comment;
-   var username=req.param.username;
+   var username=req.query.username;
    pool.query("Insert into comlist(comment,username) values('"+comment+"','"+username+"')",function(err,result){
        if(err){}
        else{
-           
+           res.sendStatus(200);
            
        }
    });
