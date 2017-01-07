@@ -34,7 +34,7 @@ app.get('/db', function (req, res) {
             
             artcount=(JSON.stringify(result.rows[0].count));
             artcount=artcount.replace(/"/g,"");
-         res.send((artcount.length).toString());
+         res.send(artcount.toString());
         }
         pool.query('SELECT * from artlist', function(err,result)      {
     if(err){}
