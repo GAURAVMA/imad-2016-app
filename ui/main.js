@@ -67,7 +67,7 @@ a.onclick=function(){
         
     };
     
-    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+comment+'/'+username,true);
+    request.open('GET','http://gauravma.imad.hasura-app.io/counter',true);
    request.send(null); 
     
 };
