@@ -56,7 +56,7 @@ getCounter();
 var comment=document.getElementById('comment').value;
 var username=document.getElementById('username').value;
 var anda=document.getElementById('butt');
-anda.onclick=function(){
+anda.onclick = function(){
    getCOM(); 
 };
 
