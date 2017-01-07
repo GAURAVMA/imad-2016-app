@@ -26,14 +26,31 @@ app.get('/counter', function (req, res) {
 
 var pool=new Pool(config);
 var artcount;
+var sendata="<div>";
 app.get('/db', function (req, res) {
     pool.query('Select Count(artname) from artlist',function(err,result){
         if(err){}
         else{
             
             artcount=JSON.stringify(result.rows[0].count);
-            res.send(artcount);
+        
         }
+        pool.query('SELECT * from artlist', function(err,result)      {
+    if(err){}
+    else{
+        for(var i=1;i<4;i++){
+            sendata=sendata+"<p>";
+            sendata=sendata+JSON.stringify(result.rows[i].artname);
+            sendata=sendata+"</p>";
+        }
+        
+        sendata=sendata+"</div>";
+        res.send(sendata);
+        
+        //res.send(JSON.stringify(result.rows[0].artname)+JSON.stringify(result.rows[1].artname)+JSON.stringify(result.rows[2].artname)+JSON.stringify(result.rows[3].artname));
+        
+    }
+});
     });
 
 
