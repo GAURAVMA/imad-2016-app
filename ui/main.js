@@ -22,11 +22,11 @@ request.onreadystatechange = function() {
         if (request.status === 200) {
             var counter = request.responseText;
             var span = document.getElementById('combox');
-            span.innerHTML = "boom1234";
+            span.innerHTML = counter.toString();
         }
     }
 };
- request.open('GET', 'http://gauravma.imad.hasura-app.io/db', true);
+ request.open('GET', 'http://gauravma.imad.hasura-app.io/cb', true);
     request.send(null);
 }
 
