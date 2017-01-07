@@ -70,7 +70,7 @@ var y = document.getElementById('username').value;
         
     };
     
-    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+x+'/'+y,true);
+    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+x+'?username='+y,true);
    request.send(null); 
     
 };
