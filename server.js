@@ -27,7 +27,7 @@ app.get('/counter', function (req, res) {
 var pool=new Pool(config);
 var artcount;
 app.get('/db', function (req, res) {
-    pool.query('Select Count(*) from artlist',function(err,result){
+    pool.query('Select Count(artid) from artlist',function(err,result){
         if(err){}
         else{
             
