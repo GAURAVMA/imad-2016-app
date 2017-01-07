@@ -48,7 +48,7 @@ request.onreadystatechange = function() {
 }
 
 
-//getCOM();
+getCOM();
 getGM();
 
 getCounter();
