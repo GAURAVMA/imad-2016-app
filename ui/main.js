@@ -53,8 +53,8 @@ getGM();
 
 getCounter();
 
-var comment=document.getElementById('comment').value;
-var username=document.getElementById('username').value;
+var comment="anda";
+var username="anda";
 var anda=document.getElementById('butt');
 anda.onclick = function(){
     var request=new XMLHttpRequest();
