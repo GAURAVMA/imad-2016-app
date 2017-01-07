@@ -53,8 +53,8 @@ getGM();
 
 getCounter();
 
-var comment="anda";
-var username="anda";
+var x = document.getElementById("comment").value;
+var y = document.getElementById("username").value;
 var anda=document.getElementById('butt');
 anda.onclick = function(){
     var request=new XMLHttpRequest();
@@ -69,7 +69,7 @@ anda.onclick = function(){
         
     };
     
-    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+comment+'/'+username,true);
+    request.open('GET','http://gauravma.imad.hasura-app.io/cb1/'+x+'/'+y,true);
    request.send(null); 
     
 };
