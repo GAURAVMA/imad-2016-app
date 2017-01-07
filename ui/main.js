@@ -1,5 +1,22 @@
 //console.log('Loaded!');
 
+function getGM(){
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+    if(request.readyState === XMLHttpRequest.DONE) {
+        if (request.status === 200) {
+            var counter = request.responseText;
+            var span = document.getElementById('dbbox');
+            span.innerHTML = counter.toString();
+        }
+    }
+};
+ request.open('GET', 'http://gauravma.imad.hasura-app.io/db', true);
+    request.send(null);
+}
+
+
+
 function getCounter(){
 var request = new XMLHttpRequest();
 request.onreadystatechange = function() {
@@ -17,7 +34,7 @@ request.onreadystatechange = function() {
 
 
 
-
+getGM();
 
 getCounter();
 
