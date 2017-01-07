@@ -52,6 +52,25 @@ getGM();
 
 getCounter();
 
+var a=document.getElementById('combut');
+a.onclick=function(){
+    var request=new XMLHttpRequest();
+    request.onreadystatechange=function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.status === 200){
+                var counter=request.responseText;
+                var span=document.getElementById('b');
+                span.innerHTML=counter.toString();
+            }
+        }
+        
+    };
+    
+    request.open('GET','http://gauravma.imad.hasura-app.io/cb1',true);
+   request.send(null); 
+    
+};
+
 var a=document.getElementById('a');
 
 a.onclick=function(){
