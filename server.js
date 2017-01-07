@@ -77,7 +77,7 @@ app.get('/cb', function (req, res) {
             sendata=sendata+"<p>";
             sendata=sendata+JSON.stringify(result.rows[i].comment);
             sendata=sendata+"<pre>                     - comment by ";
-            sendata=sendata+JSON.stringify(result.rows[i].username)+"</pre>";
+            sendata=sendata+JSON.stringify(result.rows[i].username)+"</pre><hr>";
         }
         
         sendata=sendata+"</div>";
