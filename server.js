@@ -32,8 +32,8 @@ app.get('/db', function (req, res) {
         if(err){}
         else{
             
-            artcount=parseInt(JSON.stringify(result.rows[0].count));
-         res.send(artcount.toString());
+            artcount=(JSON.stringify(result.rows[0].count));
+         res.send((artcount.length).toString());
         }
         pool.query('SELECT * from artlist', function(err,result)      {
     if(err){}
