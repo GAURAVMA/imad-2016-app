@@ -26,7 +26,7 @@ request.onreadystatechange = function() {
         }
     }
 };
- request.open('GET', 'http://gauravma.imad.hasura-app.io/cb', true);
+ request.open('GET', 'http://gauravma.imad.hasura-app.io/db', true);
     request.send(null);
 }
 
