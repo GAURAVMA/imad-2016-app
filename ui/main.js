@@ -53,10 +53,11 @@ getGM();
 
 getCounter();
 
-var x = document.getElementById('comment').value;
-var y = document.getElementById('username').value;
+
 var anda=document.getElementById('butt');
 anda.onclick = function(){
+    var x = document.getElementById('comment').value;
+var y = document.getElementById('username').value;
     var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
             if(request.readyState === XMLHttpRequest.DONE){
