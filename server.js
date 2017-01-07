@@ -26,9 +26,9 @@ app.get('/counter', function (req, res) {
 
 var pool=new Pool(config);
 app.get('/db', function (req, res) {
-pool.query('SELECT artid from artlist', function(err,result)      {
+pool.query('SELECT artname from artlist', function(err,result)      {
     if(err){}
-    else{res.send(JSON.stringify(result));}
+    else{res.send(JSON.stringify(result.rows));}
 });
 });
 
