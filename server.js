@@ -31,7 +31,7 @@ app.get('/db', function (req, res) {
         if(err){}
         else{
             
-            artcount=JSON.stringify(result);
+            artcount=JSON.stringify(result.row);
             res.send(artcount);
         }
     });
